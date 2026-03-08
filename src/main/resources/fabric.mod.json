@@ -1,0 +1,36 @@
+{
+	"schemaVersion": 1,
+	"id": "litematica-auto-ignite",
+	"version": "${version}",
+	"name": "Litematica Auto Ignite",
+	"description": "Automatically ignites nether portals based on Litematica schematics.",
+	"authors": [
+		"Dalkco"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/Dalkco11/LitematicaAutoIgnite"
+	},
+	"license": "MIT",
+	"icon": "assets/litematica-auto-ignite/icon.png",
+	"environment": "client",
+	"entrypoints": {
+		"client": [
+			"com.example.litematicaautoignite.LitematicaAutoIgniteMod"
+		]
+	},
+	"mixins": [
+		"litematica-auto-ignite.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.9",
+		"minecraft": "~1.21.11",
+		"java": ">=21",
+		"fabric-api": "*",
+        "litematica": "*",
+        "malilib": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
