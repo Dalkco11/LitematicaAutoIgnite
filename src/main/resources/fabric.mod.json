@@ -16,21 +16,17 @@
 	"environment": "client",
 	"entrypoints": {
 		"client": [
-			"com.example.litematicaautoignite.LitematicaAutoIgniteMod"
+			"com.dalkco.litematicaautoignite.LitematicaAutoIgniteMod"
 		]
 	},
 	"mixins": [
 		"litematica-auto-ignite.mixins.json"
 	],
 	"depends": {
-		"fabricloader": ">=0.16.9",
-		"minecraft": "~1.21.11",
-		"java": ">=21",
+		"fabricloader": ">=0.18.4",
+		"minecraft": ">=26.1",
 		"fabric-api": "*",
         "litematica": "*",
         "malilib": "*"
-	},
-	"suggests": {
-		"another-mod": "*"
 	}
 }

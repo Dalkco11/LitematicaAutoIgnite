@@ -1,0 +1,18 @@
+{
+  "project_id": "litematica-auto-ignite",
+  "github_repo": "Dalkco11/LitematicaAutoIgnite",
+  "dependencies": [
+    {
+      "project_id": "P7dR8mSH",
+      "dependency_type": "required"
+    },
+    {
+      "project_id": "bEpr0Arc",
+      "dependency_type": "required"
+    },
+    {
+      "project_id": "GcWjdA9I",
+      "dependency_type": "required"
+    }
+  ]
+}

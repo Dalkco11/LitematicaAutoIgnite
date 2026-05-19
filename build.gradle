@@ -1,5 +1,5 @@
 plugins {
-	id 'fabric-loom' version '1.14-SNAPSHOT'
+	id 'net.fabricmc.fabric-loom' version '1.15-SNAPSHOT'
 	id 'maven-publish'
 }
 
@@ -13,19 +13,16 @@ base {
 repositories {
 	maven { url 'https://maven.fabricmc.net/' }
 	maven { url "https://api.modrinth.com/maven" }
-    maven { url "https://masa.dy.fi/maven" }
+	maven { url "https://masa.dy.fi/maven" }
 }
 
 dependencies {
 	minecraft "com.mojang:minecraft:${project.minecraft_version}"
-	mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
-	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
+	implementation "net.fabricmc:fabric-loader:${project.loader_version}"
+	implementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
-	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
-
-    // Litematica & MaLiLib for 1.21.11
-    modImplementation "maven.modrinth:malilib:0.27.1"
-    modImplementation "maven.modrinth:litematica:0.25.1"
+	implementation files("libs/malilib-fabric-26.1.2-0.28.4.jar")
+	implementation files("libs/litematica-fabric-26.1.2-0.27.4.jar")
 }
 
 processResources {
@@ -36,14 +33,11 @@ processResources {
 	}
 }
 
-tasks.withType(JavaCompile).configureEach {
-	it.options.release = 21
-}
-
 java {
 	withSourcesJar()
-	sourceCompatibility = JavaVersion.VERSION_21
-	targetCompatibility = JavaVersion.VERSION_21
+	toolchain {
+		languageVersion = JavaLanguageVersion.of(25)
+	}
 }
 
 jar {

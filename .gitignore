@@ -5,3 +5,5 @@ bin/
 run/
 out/
 .idea/
+release/
+libs/
