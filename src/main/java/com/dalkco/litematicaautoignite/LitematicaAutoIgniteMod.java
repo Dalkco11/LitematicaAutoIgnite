@@ -6,7 +6,7 @@ import fi.dy.masa.litematica.schematic.placement.SchematicPlacement;
 import fi.dy.masa.litematica.schematic.placement.SchematicPlacementManager;
 import fi.dy.masa.litematica.schematic.placement.SubRegionPlacement;
 import fi.dy.masa.litematica.util.PositionUtils;
-import fi.dy.masa.malilib.util.LayerRange;
+import fi.dy.masa.malilib.util.position.LayerRange;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.minecraft.world.level.block.Blocks;
@@ -14,6 +14,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.InteractionHand;
+import net.minecraft.world.item.component.SwingAnimation;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -154,7 +155,7 @@ public class LitematicaAutoIgniteMod implements ClientModInitializer {
             if (bestHitResult != null) {
                 InteractionHand hand = mainHand.getItem() == Items.FLINT_AND_STEEL ? InteractionHand.MAIN_HAND : InteractionHand.OFF_HAND;
                 client.gameMode.useItemOn(client.player, hand, bestHitResult);
-                client.player.swing(hand);
+                client.player.swing(hand, SwingAnimation.DEFAULT, true);
             }
         });
     }

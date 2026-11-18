@@ -23,8 +23,8 @@
 		"litematica-auto-ignite.mixins.json"
 	],
 	"depends": {
-		"fabricloader": ">=0.18.4",
-		"minecraft": ">=26.1",
+		"fabricloader": ">=0.20.1",
+		"minecraft": ">=26.3",
 		"fabric-api": "*",
         "litematica": "*",
         "malilib": "*"

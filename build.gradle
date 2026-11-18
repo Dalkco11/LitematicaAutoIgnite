@@ -1,5 +1,5 @@
 plugins {
-	id 'net.fabricmc.fabric-loom' version '1.15-SNAPSHOT'
+	id 'net.fabricmc.fabric-loom' version '1.19-SNAPSHOT'
 	id 'maven-publish'
 }
 
@@ -21,8 +21,8 @@ dependencies {
 	implementation "net.fabricmc:fabric-loader:${project.loader_version}"
 	implementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
-	implementation files("libs/malilib-fabric-26.1.2-0.28.4.jar")
-	implementation files("libs/litematica-fabric-26.1.2-0.27.4.jar")
+	implementation "maven.modrinth:malilib:0.30.2"
+	implementation "maven.modrinth:litematica:0.29.1"
 }
 
 processResources {
