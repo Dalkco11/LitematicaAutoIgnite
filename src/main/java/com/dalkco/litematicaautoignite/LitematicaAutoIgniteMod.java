@@ -34,9 +34,12 @@ public class LitematicaAutoIgniteMod implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
         LOGGER.info("Litematica Auto Ignite initialized!");
+        LitematicaAutoIgniteConfig.load();
 
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
             if (client.player == null || client.level == null || client.gameMode == null) return;
+            LitematicaAutoIgniteConfig.Data cfg = LitematicaAutoIgniteConfig.get();
+            if (!cfg.enabled) return;
 
             tickCounter++;
             if (tickCounter < 10) return; // Run every 10 ticks (0.5s)
@@ -51,7 +54,7 @@ public class LitematicaAutoIgniteMod implements ClientModInitializer {
 
             SchematicPlacementManager placementManager = DataManager.getSchematicPlacementManager();
             Collection<SchematicPlacement> placements = placementManager.getAllSchematicsPlacements();
-            LayerRange layerRange = DataManager.getRenderLayerRange();
+            LayerRange layerRange = cfg.respectLayerRange ? DataManager.getRenderLayerRange() : null;
 
             BlockHitResult bestHitResult = null;
             double minDistanceSq = Double.MAX_VALUE;
@@ -155,7 +158,9 @@ public class LitematicaAutoIgniteMod implements ClientModInitializer {
             if (bestHitResult != null) {
                 InteractionHand hand = mainHand.getItem() == Items.FLINT_AND_STEEL ? InteractionHand.MAIN_HAND : InteractionHand.OFF_HAND;
                 client.gameMode.useItemOn(client.player, hand, bestHitResult);
-                client.player.swing(hand, SwingAnimation.DEFAULT, true);
+                if (cfg.swingHand) {
+                    client.player.swing(hand, SwingAnimation.DEFAULT, true);
+                }
             }
         });
     }

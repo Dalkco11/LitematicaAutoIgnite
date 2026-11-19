@@ -1,0 +1,9 @@
+{
+  "litematica-auto-ignite.config.title": "Litematica Auto Ignite Settings",
+  "litematica-auto-ignite.config.enabled": "Auto ignite",
+  "litematica-auto-ignite.config.enabled.tooltip": "Light nether portals from your schematic while you hold flint and steel.",
+  "litematica-auto-ignite.config.layer_range": "Follow layer range",
+  "litematica-auto-ignite.config.layer_range.tooltip": "Only light portals inside Litematica's render layer range.",
+  "litematica-auto-ignite.config.swing_hand": "Swing hand",
+  "litematica-auto-ignite.config.swing_hand.tooltip": "Play the arm swing animation when a portal is lit."
+}

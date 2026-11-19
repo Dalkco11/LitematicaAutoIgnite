@@ -14,6 +14,7 @@ repositories {
 	maven { url 'https://maven.fabricmc.net/' }
 	maven { url "https://api.modrinth.com/maven" }
 	maven { url "https://masa.dy.fi/maven" }
+	maven { url 'https://maven.terraformersmc.com/' }
 }
 
 dependencies {
@@ -23,6 +24,8 @@ dependencies {
 
 	implementation "maven.modrinth:malilib:0.30.2"
 	implementation "maven.modrinth:litematica:0.29.1"
+	// optional: config screen entry in Mod Menu
+	compileOnly "com.terraformersmc:modmenu:${project.modmenu_version}"
 }
 
 processResources {

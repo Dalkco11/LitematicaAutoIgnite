@@ -16,6 +16,8 @@
 - **Automatic Ignition**: Detects obsidian frames in the schematic and automatically uses a flint and steel.
 - **Litematica Integration**: Works directly with your loaded schematics.
 - **Safety**: Client-side only operation.
+- **Settings**: in [Mod Menu](https://modrinth.com/mod/modmenu) you can turn auto ignite on or off, limit it to Litematica's layer range and toggle the hand swing.
+- **English and Russian**: the mod follows your game language.
 
 ### 📥 Installation
 
@@ -49,6 +51,8 @@ Join my Discord server for chat, support, and news:
 - **Автоматическое зажигание**: Мод обнаруживает блоки обсидиана в схематике и автоматически использует зажигалку.
 - **Интеграция с Litematica**: Работает напрямую с вашими загруженными схематиками.
 - **Безопасность**: Работает на стороне клиента.
+- **Настройки**: в [Mod Menu](https://modrinth.com/mod/modmenu) можно включить или выключить автоподжиг, ограничить его диапазоном слоёв Litematica и включить или выключить взмах рукой.
+- **Английский и русский**: мод переключается вместе с языком игры.
 
 ### 📥 Установка
 

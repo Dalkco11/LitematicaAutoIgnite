@@ -17,6 +17,9 @@
 	"entrypoints": {
 		"client": [
 			"com.dalkco.litematicaautoignite.LitematicaAutoIgniteMod"
+		],
+		"modmenu": [
+			"com.dalkco.litematicaautoignite.ModMenuIntegration"
 		]
 	},
 	"mixins": [
@@ -28,5 +31,8 @@
 		"fabric-api": "*",
         "litematica": "*",
         "malilib": "*"
+	},
+	"suggests": {
+		"modmenu": "*"
 	}
 }

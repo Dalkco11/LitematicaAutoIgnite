@@ -1,0 +1,9 @@
+{
+  "litematica-auto-ignite.config.title": "Настройки Litematica Auto Ignite",
+  "litematica-auto-ignite.config.enabled": "Автоподжиг",
+  "litematica-auto-ignite.config.enabled.tooltip": "Поджигает порталы в Незер из твоей схемы, пока ты держишь огниво.",
+  "litematica-auto-ignite.config.layer_range": "Учитывать слои",
+  "litematica-auto-ignite.config.layer_range.tooltip": "Поджигать только порталы внутри диапазона отображаемых слоёв Litematica.",
+  "litematica-auto-ignite.config.swing_hand": "Взмах рукой",
+  "litematica-auto-ignite.config.swing_hand.tooltip": "Показывать взмах рукой, когда портал поджигается."
+}
